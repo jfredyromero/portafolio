@@ -1,0 +1,25 @@
+.arrow {
+	margin-top: 4%;
+	@include button-animation;
+
+	&-down {
+		display: block;
+		border-radius: 10%;
+		border: solid $color-white;
+		border-width: 0 0.5rem 0.5rem 0;
+		padding: 2rem;
+		transform: rotate(45deg);
+
+		&:not(:last-child) {
+			margin-bottom: -3rem;
+		}
+	}
+
+	&:hover {
+		transform: translateY(-5%);
+	}
+
+	&:active {
+		transform: translateY(1%);
+	}
+}

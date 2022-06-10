@@ -1,0 +1,41 @@
+.composition {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+	&__pic {
+		position: absolute;
+		z-index: 5;
+		width: 50%;
+		border-radius: 1rem;
+		transition: all 0.3s;
+		outline-offset: 1rem;
+		@include big-shadow;
+
+		&--1 {
+			top: 0;
+			left: 5%;
+		}
+
+		&--2 {
+			top: 8rem;
+			right: 0;
+		}
+
+		&--3 {
+			top: 16rem;
+			left: 25%;
+		}
+
+		&:hover {
+			z-index: 10;
+			transform: scale(1.1) translateY(-1rem);
+			outline: 1rem solid $color-primary-dark;
+			@include big-shadow;
+		}
+	}
+
+	&:hover &__pic:not(:hover) {
+		transform: scale(0.9);
+	}
+}

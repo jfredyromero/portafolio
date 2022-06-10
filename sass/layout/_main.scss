@@ -1,0 +1,16 @@
+.main {
+	opacity: 0;
+	filter: drop-shadow(0 0.1rem 1.5rem rgba($color-black, 0.6));
+	animation: move-in-up-polygon 1.5s ease-out 1s forwards;
+
+	&__shape {
+		margin-top: 80vh;
+		background-color: $color-white;
+		transform: rotate(180deg);
+		clip-path: $wave-polygon;
+
+		& > section {
+			transform: rotate(180deg);
+		}
+	}
+}

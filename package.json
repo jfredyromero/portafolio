@@ -1,0 +1,18 @@
+{
+  "name": "Portafolio",
+  "version": "1.0.0",
+  "description": "This is my web portafolio",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "node-sass sass/main.scss css/style.css -w",
+    "livereload": "live-server",
+    "prestart": "node-sass sass/main.scss css/style.css",
+    "start": "concurrently  \" npm run sass:watch \" \" npm run livereload  \" "
+  },
+  "author": "Jhon Fredy Romero",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.2.1",
+    "node-sass": "^7.0.1"
+  }
+}
